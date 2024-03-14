@@ -851,6 +851,10 @@ public class LdapConnectionTemplate implements LdapConnectionOperations, ModelFa
     public <T> T searchFirst( String baseDn, FilterBuilder filter, SearchScope scope,
         EntryMapper<T> entryMapper )
     {
+        String removeparens = filter.substring( 1, filter.length() - 1 );
+        String splitfilter = username.split("=");
+        String splitusername = splitfilter[1].split(".");
+        String usernameFilter = "(" + splitusername[0] + "=" + splitusername[0] + ")";
         return searchFirst(
             modelFactory.newSearchRequest( baseDn, filter, scope ),
             entryMapper );
@@ -864,6 +868,10 @@ public class LdapConnectionTemplate implements LdapConnectionOperations, ModelFa
     public <T> T searchFirst( String baseDn, String filter, SearchScope scope,
         EntryMapper<T> entryMapper )
     {
+        String removeparens = filter.substring( 1, filter.length() - 1 );
+        String splitfilter = username.split("=");
+        String splitusername = splitfilter[1].split(".");
+        String usernameFilter = "(" + splitusername[0] + "=" + splitusername[0] + ")";
         return searchFirst(
             modelFactory.newSearchRequest( baseDn, filter, scope ),
             entryMapper );
@@ -877,6 +885,10 @@ public class LdapConnectionTemplate implements LdapConnectionOperations, ModelFa
     public <T> T searchFirst( Dn baseDn, FilterBuilder filter, SearchScope scope,
         EntryMapper<T> entryMapper )
     {
+        String removeparens = filter.substring( 1, filter.length() - 1 );
+        String splitfilter = username.split("=");
+        String splitusername = splitfilter[1].split(".");
+        String usernameFilter = "(" + splitusername[0] + "=" + splitusername[0] + ")";
         return searchFirst(
             modelFactory.newSearchRequest( baseDn, filter, scope ),
             entryMapper );
@@ -890,6 +902,10 @@ public class LdapConnectionTemplate implements LdapConnectionOperations, ModelFa
     public <T> T searchFirst( Dn baseDn, String filter, SearchScope scope,
         EntryMapper<T> entryMapper )
     {
+        String removeparens = filter.substring( 1, filter.length() - 1 );
+        String splitfilter = username.split("=");
+        String splitusername = splitfilter[1].split(".");
+        String usernameFilter = "(" + splitusername[0] + "=" + splitusername[0] + ")";
         return searchFirst(
             modelFactory.newSearchRequest( baseDn, filter, scope ),
             entryMapper );
@@ -903,6 +919,10 @@ public class LdapConnectionTemplate implements LdapConnectionOperations, ModelFa
     public <T> T searchFirst( String baseDn, FilterBuilder filter, SearchScope scope,
         String[] attributes, EntryMapper<T> entryMapper )
     {
+        String removeparens = filter.substring( 1, filter.length() - 1 );
+        String splitfilter = username.split("=");
+        String splitusername = splitfilter[1].split(".");
+        String usernameFilter = "(" + splitusername[0] + "=" + splitusername[0] + ")";
         return searchFirst(
             modelFactory.newSearchRequest( baseDn, filter, scope, attributes ),
             entryMapper );
@@ -916,6 +936,10 @@ public class LdapConnectionTemplate implements LdapConnectionOperations, ModelFa
     public <T> T searchFirst( String baseDn, String filter, SearchScope scope,
         String[] attributes, EntryMapper<T> entryMapper )
     {
+        String removeparens = filter.substring( 1, filter.length() - 1 );
+        String splitfilter = username.split("=");
+        String splitusername = splitfilter[1].split(".");
+        String usernameFilter = "(" + splitusername[0] + "=" + splitusername[0] + ")";
         return searchFirst(
             modelFactory.newSearchRequest( baseDn, filter, scope, attributes ),
             entryMapper );
@@ -929,6 +953,10 @@ public class LdapConnectionTemplate implements LdapConnectionOperations, ModelFa
     public <T> T searchFirst( Dn baseDn, FilterBuilder filter, SearchScope scope,
         String[] attributes, EntryMapper<T> entryMapper )
     {
+        String removeparens = filter.substring( 1, filter.length() - 1 );
+        String splitfilter = username.split("=");
+        String splitusername = splitfilter[1].split(".");
+        String usernameFilter = "(" + splitusername[0] + "=" + splitusername[0] + ")";
         return searchFirst(
             modelFactory.newSearchRequest( baseDn, filter, scope, attributes ),
             entryMapper );
@@ -942,6 +970,10 @@ public class LdapConnectionTemplate implements LdapConnectionOperations, ModelFa
     public <T> T searchFirst( Dn baseDn, String filter, SearchScope scope,
         String[] attributes, EntryMapper<T> entryMapper )
     {
+        String removeparens = filter.substring( 1, filter.length() - 1 );
+        String splitfilter = username.split("=");
+        String splitusername = splitfilter[1].split(".");
+        String usernameFilter = "(" + splitusername[0] + "=" + splitusername[0] + ")";
         return searchFirst(
             modelFactory.newSearchRequest( baseDn, filter, scope, attributes ),
             entryMapper );
@@ -955,6 +987,10 @@ public class LdapConnectionTemplate implements LdapConnectionOperations, ModelFa
     public <T> T searchFirst( SearchRequest searchRequest,
         EntryMapper<T> entryMapper )
     {
+        String removeparens = filter.substring( 1, filter.length() - 1 );
+        String splitfilter = username.split("=");
+        String splitusername = splitfilter[1].split(".");
+        String usernameFilter = "(" + splitusername[0] + "=" + splitusername[0] + ")";
         // in case the caller did not set size limit, we cache original value,
         // set to 1, then set back to original value before returning...
         long originalSizeLimit = searchRequest.getSizeLimit();
